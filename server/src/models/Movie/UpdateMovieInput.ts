@@ -12,5 +12,8 @@ export class UpdateMovieInput {
   genre?: string;
 
   @Field({ nullable: true })
+  image?: string;
+
+  @Field({ nullable: true })
   directorId?: string;
 }

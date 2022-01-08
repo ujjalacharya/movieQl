@@ -17,11 +17,13 @@ export class DirectorResolver {
 
   @Mutation(() => Director || Boolean)
   async createDirector(@Arg("data") data: CreateDirectorInput) {
-    const {name, description } = data;
+
+    const { name, description, image } = data;
  
     const director = new Director()
     director.name = name;
     director.description = description;
+    director.image = image;
     await director.save();
     return director;
   }

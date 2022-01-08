@@ -12,5 +12,8 @@ export class CreateMovieInput {
   genre: string;
 
   @Field()
+  image: string;
+
+  @Field()
   directorId: string;
 }

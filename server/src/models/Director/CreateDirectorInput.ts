@@ -7,4 +7,7 @@ export class CreateDirectorInput {
 
   @Field()
   description: string;
+
+  @Field()
+  image: string;
 }

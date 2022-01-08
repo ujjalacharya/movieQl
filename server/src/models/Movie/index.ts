@@ -18,9 +18,12 @@ export class Movie extends Model {
   @Field(() => String)
   @Column()
   genre: string;
+
+  @Field(() => String)
+  @Column()
+  image: string;
   
   //   Relationships
-  
   @Field(() => Director)
   @ManyToOne(() => Director, (director) => director.movie, { eager: true })
   director: Director;

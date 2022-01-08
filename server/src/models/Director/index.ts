@@ -20,8 +20,11 @@ export class Director extends Model {
   @Column()
   description: string;
 
-  //   Relationships
+  @Field(() => String)
+  @Column()
+  image: string;
 
+  //   Relationships
   @Field(() => Movie)
   @OneToMany(() => Movie, (movie) => movie.director)
   movie: Movie;

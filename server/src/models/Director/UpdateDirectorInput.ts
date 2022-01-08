@@ -7,4 +7,7 @@ export class UpdateDirectorInput {
 
   @Field({ nullable: true })
   description?: string;
+
+  @Field({ nullable: true })
+  image?: string;
 }

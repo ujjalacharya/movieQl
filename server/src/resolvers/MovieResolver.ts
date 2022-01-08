@@ -18,7 +18,7 @@ export class MovieResolver {
 
   @Mutation(() => Movie || Boolean)
   async createMovie(@Arg("data") data: CreateMovieInput) {
-    const {title, description, directorId, genre} = data;
+    const {title, description, directorId, genre, image} = data;
 
     const director = await Director.findOne({where: {id: directorId}})
     if(!director){
@@ -28,6 +28,7 @@ export class MovieResolver {
     movie.title = title;
     movie.description = description;
     movie.director = director;
+    movie.image = image;
     movie.genre = genre;
     await movie.save();
     return movie;
