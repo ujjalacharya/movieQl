@@ -1,5 +1,5 @@
-import { Entity, BaseEntity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
-import { ObjectType, Field, ID } from "type-graphql";
+import { Entity, Column, ManyToOne } from "typeorm";
+import { ObjectType, Field } from "type-graphql";
 import Model from "../Model";
 import { Director } from "../Director";
 

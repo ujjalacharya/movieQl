@@ -1,11 +1,9 @@
 import {
   Entity,
-  BaseEntity,
-  PrimaryGeneratedColumn,
   Column,
   OneToMany,
 } from "typeorm";
-import { ObjectType, Field, ID } from "type-graphql";
+import { ObjectType, Field } from "type-graphql";
 import Model from "../Model";
 import { Movie } from "../Movie";
 
@@ -24,7 +22,7 @@ export class Director extends Model {
   @Column()
   image: string;
 
-  //   Relationships
+  //Relationships
   @Field(() => Movie)
   @OneToMany(() => Movie, (movie) => movie.director)
   movie: Movie;
