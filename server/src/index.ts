@@ -11,7 +11,7 @@ async function main() {
   const schema = await buildSchema({ resolvers: [MovieResolver, DirectorResolver] });
   const server = new ApolloServer({ schema });
   await server.listen(4000);
-  console.log(" GraphQL server has started!");
+  console.log("Node server has started at PORT 4000 ");
 }
 
 main();
