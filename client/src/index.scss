@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #222;
+}
+
+.modal__image {
+  width: 100%;
+  object-fit: cover;
+  height: 60vh;
+}
