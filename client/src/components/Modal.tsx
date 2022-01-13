@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { GlobalModalContext } from "../context/Modal";
+import React, { useContext } from 'react';
+import { GlobalModalContext } from '../context/Modal';
 
 const Modal = () => {
   const { visible, content, setVisible, setContent } =
@@ -14,20 +14,24 @@ const Modal = () => {
               <span
                 className="close"
                 onClick={() => {
-                  setVisible("none");
+                  setVisible('none');
                   setContent(null);
                 }}
               >
                 &times;
               </span>
-              <h2>{content.name}</h2>
             </div>
-            <img
-              src={content.image}
-              alt={content.name}
-              className="modal__image"
-            />
-            <div className="modal__body">{content.description}</div>{" "}
+            <div className="modal__body">
+              <img
+                src={content.image}
+                alt={content.name}
+                className="modal__image"
+              />
+              <div className="modal__description">
+                <h2>{content.name}</h2>
+                <p>{content.description}</p>
+              </div>
+            </div>{' '}
           </>
         ) : (
           <h1>Loading</h1>

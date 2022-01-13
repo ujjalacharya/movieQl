@@ -112,7 +112,6 @@ const MoviesList = () => {
                       .getItem("fav")
                       ?.split(",")
                       .filter((id) => {
-                        console.log(id, state.movie.id);
                         return id.trim() !== state.movie.id;
                       })
                       .join(",");
